@@ -1,0 +1,1052 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreateQuizActivity">
+
+    <TextView
+        android:id="@+id/c_q_label_screen_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/screen_title_create_quiz"
+        android:textAlignment="viewStart"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/c_q_label_quiz_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="64dp"
+        android:text="@string/c_q_label_quiz_name"
+        android:textAlignment="viewStart"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/c_q_textbox_quiz_name"
+        android:layout_width="wrap_content"
+        android:layout_height="42dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/c_q_hint_quiz_name"
+        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890- "
+        android:inputType="text"
+        android:labelFor="@id/c_q_label_quiz_name"
+        android:textAlignment="viewStart"
+        android:textColor="@android:color/black"
+        app:layout_constraintStart_toEndOf="@+id/c_q_label_quiz_name"
+        app:layout_constraintTop_toBottomOf="@+id/c_q_label_screen_title" />
+
+    <TextView
+        android:id="@+id/c_q_label_quiz_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/c_q_label_quiz_description"
+        android:textAlignment="viewStart"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/c_q_label_quiz_name" />
+
+    <EditText
+        android:id="@+id/c_q_textbox_quiz_description"
+        android:layout_width="wrap_content"
+        android:layout_height="42dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/c_q_hint_quiz_description"
+        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890- "
+        android:inputType="text"
+        android:labelFor="@id/c_q_label_quiz_description"
+        android:textAlignment="viewStart"
+        android:textColor="@android:color/black"
+        app:layout_constraintStart_toEndOf="@+id/c_q_label_quiz_description"
+        app:layout_constraintTop_toBottomOf="@+id/c_q_textbox_quiz_name" />
+
+    <ScrollView
+        android:id="@+id/c_q_scroll_view_1"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/scroll_view_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/c_q_label_quiz_description">
+
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <!-- **************** Word 1 UI ********************* -->
+            <EditText
+                android:id="@+id/word1"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:hint="@string/c_q_hint_word1"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890- "
+                android:inputType="text"
+                android:textColor="@color/colorBlack"
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/definition1"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890- "
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:enabled="false"
+                android:hint="@string/c_q_hint_definition1"
+                android:inputType="text"
+                android:textColor="@color/colorBlack"
+                android:visibility="visible"
+                app:layout_constraintStart_toEndOf="@+id/word1"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/word_button1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="0dp"
+                android:enabled="false"
+                android:text="@string/c_q_button_add_word"
+                android:visibility="visible"
+                app:layout_constraintStart_toEndOf="@+id/definition1"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <!-- **************** Word 2 UI ********************* -->
+
+            <EditText
+                android:id="@+id/word2"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:enabled="false"
+                android:hint="@string/c_q_hint_word2"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890- "
+                android:inputType="text"
+                android:textColor="@color/colorBlack"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/word1" />
+
+            <EditText
+                android:id="@+id/definition2"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:enabled="false"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890- "
+                android:hint="@string/c_q_hint_definition2"
+                android:inputType="text"
+                android:textColor="@color/colorBlack"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/word2"
+                app:layout_constraintTop_toBottomOf="@+id/definition1" />
+
+            <Button
+                android:id="@+id/word_button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:enabled="false"
+                android:text="@string/c_q_button_add_word"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/definition2"
+                app:layout_constraintTop_toBottomOf="@+id/word_button1" />
+
+            <!-- **************** Word 3 UI ********************* -->
+
+            <EditText
+                android:id="@+id/word3"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890- "
+                android:enabled="false"
+                android:hint="@string/c_q_hint_word3"
+                android:inputType="text"
+                android:textColor="@color/colorBlack"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/word2" />
+
+            <EditText
+                android:id="@+id/definition3"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890- "
+                android:enabled="false"
+                android:hint="@string/c_q_hint_definition3"
+                android:inputType="text"
+                android:textColor="@color/colorBlack"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/word3"
+                app:layout_constraintTop_toBottomOf="@+id/definition2" />
+
+            <Button
+                android:id="@+id/word_button3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:enabled="false"
+                android:text="@string/c_q_button_add_word"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/definition3"
+                app:layout_constraintTop_toBottomOf="@+id/word_button2" />
+
+            <!-- **************** Word 4 UI ********************* -->
+
+            <EditText
+                android:id="@+id/word4"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:enabled="false"
+                android:hint="@string/c_q_hint_word4"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890- "
+                android:inputType="text"
+                android:textColor="@color/colorBlack"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/word3" />
+
+            <EditText
+                android:id="@+id/definition4"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:enabled="false"
+                android:hint="@string/c_q_hint_definition4"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890- "
+                android:inputType="text"
+                android:textColor="@color/colorBlack"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/word4"
+                app:layout_constraintTop_toBottomOf="@+id/definition3" />
+
+            <Button
+                android:id="@+id/word_button4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:enabled="false"
+                android:text="@string/c_q_button_add_word"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/definition4"
+                app:layout_constraintTop_toBottomOf="@+id/word_button3" />
+
+            <!-- **************** Word 5 UI ********************* -->
+
+            <EditText
+                android:id="@+id/word5"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:enabled="false"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890- "
+                android:hint="@string/c_q_hint_word5"
+                android:inputType="text"
+                android:textColor="@color/colorBlack"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/word4" />
+
+            <EditText
+                android:id="@+id/definition5"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:enabled="false"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890- "
+                android:hint="@string/c_q_hint_definition5"
+                android:inputType="text"
+                android:textColor="@color/colorBlack"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/word5"
+                app:layout_constraintTop_toBottomOf="@+id/definition4" />
+
+            <Button
+                android:id="@+id/word_button5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:enabled="false"
+                android:text="@string/c_q_button_add_word"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/definition5"
+                app:layout_constraintTop_toBottomOf="@+id/word_button4" />
+
+            <!-- **************** Word 6 UI ********************* -->
+
+            <EditText
+                android:id="@+id/word6"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:enabled="false"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890- "
+                android:hint="@string/c_q_hint_word6"
+                android:inputType="text"
+                android:textColor="@color/colorBlack"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/word5" />
+
+            <EditText
+                android:id="@+id/definition6"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890- "
+                android:layout_marginTop="8dp"
+                android:enabled="false"
+                android:hint="@string/c_q_hint_definition6"
+                android:inputType="text"
+                android:textColor="@color/colorBlack"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/word6"
+                app:layout_constraintTop_toBottomOf="@+id/definition5" />
+
+            <Button
+                android:id="@+id/word_button6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:enabled="false"
+                android:text="@string/c_q_button_add_word"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/definition6"
+                app:layout_constraintTop_toBottomOf="@+id/word_button5" />
+
+            <!-- **************** Word 7 UI ********************* -->
+
+            <EditText
+                android:id="@+id/word7"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:enabled="false"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890- "
+                android:hint="@string/c_q_hint_word7"
+                android:inputType="text"
+                android:textColor="@color/colorBlack"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/word6" />
+
+            <EditText
+                android:id="@+id/definition7"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:enabled="false"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890- "
+                android:hint="@string/c_q_hint_definition7"
+                android:inputType="text"
+                android:textColor="@color/colorBlack"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/word7"
+                app:layout_constraintTop_toBottomOf="@+id/definition6" />
+
+            <Button
+                android:id="@+id/word_button7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:enabled="false"
+                android:text="@string/c_q_button_add_word"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/definition7"
+                app:layout_constraintTop_toBottomOf="@+id/word_button6" />
+
+            <!-- **************** Word 8 UI ********************* -->
+
+            <EditText
+                android:id="@+id/word8"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:enabled="false"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890- "
+                android:hint="@string/c_q_hint_word8"
+                android:inputType="text"
+                android:textColor="@color/colorBlack"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/word7" />
+
+            <EditText
+                android:id="@+id/definition8"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:enabled="false"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890- "
+                android:hint="@string/c_q_hint_definition8"
+                android:inputType="text"
+                android:textColor="@color/colorBlack"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/word8"
+                app:layout_constraintTop_toBottomOf="@+id/definition7" />
+
+            <Button
+                android:id="@+id/word_button8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:enabled="false"
+                android:text="@string/c_q_button_add_word"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/definition8"
+                app:layout_constraintTop_toBottomOf="@+id/word_button7" />
+
+            <!-- **************** Word 9 UI ********************* -->
+
+            <EditText
+                android:id="@+id/word9"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890- "
+                android:enabled="false"
+                android:hint="@string/c_q_hint_word9"
+                android:inputType="text"
+                android:textColor="@color/colorBlack"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/word8" />
+
+            <EditText
+                android:id="@+id/definition9"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890- "
+                android:layout_marginTop="8dp"
+                android:enabled="false"
+                android:hint="@string/c_q_hint_definition9"
+                android:inputType="text"
+                android:textColor="@color/colorBlack"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/word9"
+                app:layout_constraintTop_toBottomOf="@+id/definition8" />
+
+            <Button
+                android:id="@+id/word_button9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:enabled="false"
+                android:text="@string/c_q_button_add_word"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/definition9"
+                app:layout_constraintTop_toBottomOf="@+id/word_button8" />
+
+            <!-- **************** Word 10 UI ********************* -->
+
+            <EditText
+                android:id="@+id/word10"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:enabled="false"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890- "
+                android:hint="@string/c_q_hint_word10"
+                android:inputType="text"
+                android:textColor="@color/colorBlack"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/word9" />
+
+            <EditText
+                android:id="@+id/definition10"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890- "
+                android:layout_marginTop="8dp"
+                android:enabled="false"
+                android:hint="@string/c_q_hint_definition10"
+                android:inputType="text"
+                android:textColor="@color/colorBlack"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/word10"
+                app:layout_constraintTop_toBottomOf="@+id/definition9" />
+
+
+        </android.support.constraint.ConstraintLayout>
+
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/c_q_scroll_view_2"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/scroll_view_bg"
+        app:layout_constraintBottom_toTopOf="@+id/c_q_button_reset"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/c_q_scroll_view_1">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+
+            <EditText
+                android:id="@+id/option1"
+                android:layout_width="102dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:enabled="false"
+                android:hint="@string/c_q_hint_option1"
+                android:inputType="text"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890- "
+                android:textColor="@color/colorBlack"
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/option2"
+                android:layout_width="102dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:enabled="false"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890- "
+                android:hint="@string/c_q_hint_option2"
+                android:inputType="text"
+                android:textColor="@color/colorBlack"
+                android:visibility="visible"
+                app:layout_constraintStart_toEndOf="@+id/option1"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/option3"
+                android:layout_width="102dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890- "
+                android:enabled="false"
+                android:hint="@string/c_q_hint_option3"
+                android:inputType="text"
+                android:textColor="@color/colorBlack"
+                android:visibility="visible"
+                app:layout_constraintStart_toEndOf="@+id/option2"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/option4"
+                android:layout_width="102dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:enabled="false"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890- "
+                android:hint="@string/c_q_hint_option4"
+                android:inputType="text"
+                android:textColor="@color/colorBlack"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/option1" />
+
+            <EditText
+                android:id="@+id/option5"
+                android:layout_width="102dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890- "
+                android:layout_marginTop="8dp"
+                android:enabled="false"
+                android:hint="@string/c_q_hint_option5"
+                android:inputType="text"
+                android:textColor="@color/colorBlack"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/option4"
+                app:layout_constraintTop_toBottomOf="@+id/option2" />
+
+            <EditText
+                android:id="@+id/option6"
+                android:layout_width="102dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890- "
+                android:layout_marginTop="8dp"
+                android:enabled="false"
+                android:hint="@string/c_q_hint_option6"
+                android:inputType="text"
+                android:textColor="@color/colorBlack"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/option5"
+                app:layout_constraintTop_toBottomOf="@+id/option3" />
+
+            <EditText
+                android:id="@+id/option7"
+                android:layout_width="102dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890- "
+                android:layout_marginTop="8dp"
+                android:enabled="false"
+                android:hint="@string/c_q_hint_option7"
+                android:inputType="text"
+                android:textColor="@color/colorBlack"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/option4" />
+
+            <EditText
+                android:id="@+id/option8"
+                android:layout_width="102dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890- "
+                android:layout_marginTop="8dp"
+                android:enabled="false"
+                android:hint="@string/c_q_hint_option8"
+                android:inputType="text"
+                android:textColor="@color/colorBlack"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/option7"
+                app:layout_constraintTop_toBottomOf="@+id/option5" />
+
+            <EditText
+                android:id="@+id/option9"
+                android:layout_width="102dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890- "
+                android:layout_marginTop="8dp"
+                android:enabled="false"
+                android:hint="@string/c_q_hint_option9"
+                android:inputType="text"
+                android:textColor="@color/colorBlack"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/option8"
+                app:layout_constraintTop_toBottomOf="@+id/option6" />
+
+            <EditText
+                android:id="@+id/option10"
+                android:layout_width="102dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890- "
+                android:layout_marginTop="8dp"
+                android:enabled="false"
+                android:hint="@string/c_q_hint_option10"
+                android:inputType="text"
+                android:textColor="@color/colorBlack"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/option7" />
+
+            <EditText
+                android:id="@+id/option11"
+                android:layout_width="102dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890- "
+                android:layout_marginTop="8dp"
+                android:enabled="false"
+                android:hint="@string/c_q_hint_option11"
+                android:inputType="text"
+                android:textColor="@color/colorBlack"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/option10"
+                app:layout_constraintTop_toBottomOf="@+id/option8" />
+
+            <EditText
+                android:id="@+id/option12"
+                android:layout_width="102dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890- "
+                android:layout_marginTop="8dp"
+                android:enabled="false"
+                android:hint="@string/c_q_hint_option12"
+                android:inputType="text"
+                android:textColor="@color/colorBlack"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/option11"
+                app:layout_constraintTop_toBottomOf="@+id/option9" />
+
+            <EditText
+                android:id="@+id/option13"
+                android:layout_width="102dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890- "
+                android:layout_marginTop="8dp"
+                android:enabled="false"
+                android:hint="@string/c_q_hint_option13"
+                android:inputType="text"
+                android:textColor="@color/colorBlack"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/option10" />
+
+            <EditText
+                android:id="@+id/option14"
+                android:layout_width="102dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890- "
+                android:layout_marginTop="8dp"
+                android:enabled="false"
+                android:hint="@string/c_q_hint_option14"
+                android:inputType="text"
+                android:textColor="@color/colorBlack"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/option13"
+                app:layout_constraintTop_toBottomOf="@+id/option11" />
+
+            <EditText
+                android:id="@+id/option15"
+                android:layout_width="102dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890- "
+                android:layout_marginTop="8dp"
+                android:enabled="false"
+                android:hint="@string/c_q_hint_option15"
+                android:inputType="text"
+                android:textColor="@color/colorBlack"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/option14"
+                app:layout_constraintTop_toBottomOf="@+id/option12" />
+
+            <EditText
+                android:id="@+id/option16"
+                android:layout_width="102dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890- "
+                android:layout_marginTop="8dp"
+                android:enabled="false"
+                android:hint="@string/c_q_hint_option16"
+                android:inputType="text"
+                android:textColor="@color/colorBlack"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/option13" />
+
+            <EditText
+                android:id="@+id/option17"
+                android:layout_width="102dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890- "
+                android:layout_marginTop="8dp"
+                android:enabled="false"
+                android:hint="@string/c_q_hint_option17"
+                android:inputType="text"
+                android:textColor="@color/colorBlack"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/option16"
+                app:layout_constraintTop_toBottomOf="@+id/option14" />
+
+            <EditText
+                android:id="@+id/option18"
+                android:layout_width="102dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890- "
+                android:layout_marginTop="8dp"
+                android:enabled="false"
+                android:hint="@string/c_q_hint_option18"
+                android:inputType="text"
+                android:textColor="@color/colorBlack"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/option17"
+                app:layout_constraintTop_toBottomOf="@+id/option15" />
+
+            <EditText
+                android:id="@+id/option19"
+                android:layout_width="102dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890- "
+                android:layout_marginTop="8dp"
+                android:enabled="false"
+                android:hint="@string/c_q_hint_option19"
+                android:inputType="text"
+                android:textColor="@color/colorBlack"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/option16" />
+
+            <EditText
+                android:id="@+id/option20"
+                android:layout_width="102dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890- "
+                android:layout_marginTop="8dp"
+                android:enabled="false"
+                android:hint="@string/c_q_hint_option20"
+                android:inputType="text"
+                android:textColor="@color/colorBlack"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/option19"
+                app:layout_constraintTop_toBottomOf="@+id/option17" />
+
+            <EditText
+                android:id="@+id/option21"
+                android:layout_width="102dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890- "
+                android:layout_marginTop="8dp"
+                android:enabled="false"
+                android:hint="@string/c_q_hint_option21"
+                android:inputType="text"
+                android:textColor="@color/colorBlack"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/option20"
+                app:layout_constraintTop_toBottomOf="@+id/option18" />
+
+            <EditText
+                android:id="@+id/option22"
+                android:layout_width="102dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890- "
+                android:layout_marginTop="8dp"
+                android:enabled="false"
+                android:hint="@string/c_q_hint_option22"
+                android:inputType="text"
+                android:textColor="@color/colorBlack"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/option19" />
+
+            <EditText
+                android:id="@+id/option23"
+                android:layout_width="102dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890- "
+                android:layout_marginTop="8dp"
+                android:enabled="false"
+                android:hint="@string/c_q_hint_option23"
+                android:inputType="text"
+                android:textColor="@color/colorBlack"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/option22"
+                app:layout_constraintTop_toBottomOf="@+id/option20" />
+
+            <EditText
+                android:id="@+id/option24"
+                android:layout_width="102dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890- "
+                android:layout_marginTop="8dp"
+                android:enabled="false"
+                android:hint="@string/c_q_hint_option24"
+                android:inputType="text"
+                android:textColor="@color/colorBlack"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/option23"
+                app:layout_constraintTop_toBottomOf="@+id/option21" />
+
+            <EditText
+                android:id="@+id/option25"
+                android:layout_width="102dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890- "
+                android:layout_marginTop="8dp"
+                android:enabled="false"
+                android:hint="@string/c_q_hint_option25"
+                android:inputType="text"
+                android:textColor="@color/colorBlack"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/option22" />
+
+            <EditText
+                android:id="@+id/option26"
+                android:layout_width="102dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890- "
+                android:layout_marginTop="8dp"
+                android:enabled="false"
+                android:hint="@string/c_q_hint_option26"
+                android:inputType="text"
+                android:textColor="@color/colorBlack"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/option25"
+                app:layout_constraintTop_toBottomOf="@+id/option23" />
+
+            <EditText
+                android:id="@+id/option27"
+                android:layout_width="102dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890- "
+                android:layout_marginTop="8dp"
+                android:enabled="false"
+                android:hint="@string/c_q_hint_option27"
+                android:inputType="text"
+                android:textColor="@color/colorBlack"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/option26"
+                app:layout_constraintTop_toBottomOf="@+id/option24" />
+
+            <EditText
+                android:id="@+id/option28"
+                android:layout_width="102dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890- "
+                android:layout_marginTop="8dp"
+                android:enabled="false"
+                android:hint="@string/c_q_hint_option28"
+                android:inputType="text"
+                android:textColor="@color/colorBlack"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/option25" />
+
+            <EditText
+                android:id="@+id/option29"
+                android:layout_width="102dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890- "
+                android:layout_marginTop="8dp"
+                android:enabled="false"
+                android:hint="@string/c_q_hint_option29"
+                android:inputType="text"
+                android:textColor="@color/colorBlack"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/option28"
+                app:layout_constraintTop_toBottomOf="@+id/option26" />
+
+            <EditText
+                android:id="@+id/option30"
+                android:layout_width="102dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890- "
+                android:layout_marginTop="8dp"
+                android:enabled="false"
+                android:hint="@string/c_q_hint_option30"
+                android:inputType="text"
+                android:textColor="@color/colorBlack"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/option29"
+                app:layout_constraintTop_toBottomOf="@+id/option27" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </ScrollView>
+    <Button
+        android:id="@+id/c_q_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cancel"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/colorFadBlue"
+        android:textColor="@android:color/white"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/c_q_scroll_view_2" />
+
+    <Button
+        android:id="@+id/c_q_button_reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/colorFadRed"
+        android:text="@string/c_q_button_reset_quiz"
+        android:textColor="@android:color/white"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintStart_toEndOf="@+id/c_q_cancel"
+        app:layout_constraintTop_toBottomOf="@+id/c_q_scroll_view_2" />
+
+    <Button
+        android:id="@+id/c_q_button_create"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/c_q_button_create_quiz"
+        android:textColor="@android:color/white"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        android:enabled="false"
+        app:layout_constraintStart_toEndOf="@id/c_q_button_reset"
+        app:layout_constraintTop_toBottomOf="@+id/c_q_scroll_view_2"
+        android:backgroundTint="@color/colorFadGreen"/>
+
+
+</android.support.constraint.ConstraintLayout>

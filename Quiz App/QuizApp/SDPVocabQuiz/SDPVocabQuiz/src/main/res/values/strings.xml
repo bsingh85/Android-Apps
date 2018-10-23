@@ -1,0 +1,117 @@
+<resources>
+
+
+    <!-- Strings related to login -->
+    <string name="screen_title_login">Login</string>
+    <string name="login_button_login">Login</string>
+    <string name="login_button_register">Register</string>
+    <string name="login_error_login">Please select unique username</string>
+    <string name="login_label_username">Username (*) :</string>
+    <string name="login_hint_username">Enter username to login</string>
+
+    <!-- Strings related to register -->
+    <string name="screen_title_register">Register</string>
+    <string name="r_label_username">Username (*) :</string>
+    <string name="r_hint_username">Enter unique username</string>
+    <string name="r_label_major">Major (*) :</string>
+    <string name="r_hint_major">M.S Computer Science</string>
+    <string name="r_label_sen_level">Seniority Level (*) :</string>
+    <string name="r_label_email">Email (*) :</string>
+    <string name="r_hint_email">Enter email id</string>
+    <string name="r_error_username">Invalid username</string>
+    <string name="r_error_unique_username">Enter unique username</string>
+    <string name="r_error_major">Invalid major</string>
+    <string name="r_error_sen_level">Invalid seniority level</string>
+    <string name="r_error_email">Invalid email id</string>
+    <string name="r_freshman">Freshman</string>
+    <string name="r_sophomore">Sophomore</string>
+    <string name="r_junior">Junior</string>
+    <string name="r_senior">Senior</string>
+    <string name="r_grad">Grad</string>
+    <string-array name="r_sen_levels">
+        <item>@string/r_freshman</item>
+        <item>@string/r_sophomore</item>
+        <item>@string/r_junior</item>
+        <item>@string/r_senior</item>
+        <item>@string/r_grad</item>
+    </string-array>
+    <string name="r_button_reset">Reset</string>
+    <string name="r_button_register">Register</string>
+
+    <!-- String related to operations screen-->
+    <string name="ops_button_create_quiz">Create Quiz</string>
+    <string name="ops_button_remove_quiz">Remove Quiz</string>
+    <string name="ops_button_practice_quiz">Practice Quiz</string>
+    <string name="ops_button_view_stats">View Stats</string>
+
+    <!-- Strings related to create quiz -->
+    <string name="app_name">SDPVocabQuiz</string>
+    <string name="screen_title_create_quiz">Create Quiz</string>
+    <string name="c_q_label_quiz_name">Quiz Name (*) :</string>
+    <string name="c_q_hint_quiz_name">Quiz1</string>
+    <string name="c_q_error_quiz_name">Enter unique quiz name</string>
+    <string name="c_q_error_invalid_quiz_name">Invalid Quiz Name</string>
+    <string name="c_q_error_quiz_description">Invalid Quiz Description</string>
+    <string name="c_q_label_quiz_description">Description (*) :</string>
+    <string name="c_q_hint_quiz_description">Android Basics Quiz</string>
+    <string name="c_q_hint_word1">Word 1</string>
+    <string name="c_q_hint_word2">Word 2</string>
+    <string name="c_q_hint_word3">Word 3</string>
+    <string name="c_q_hint_word4">Word 4</string>
+    <string name="c_q_hint_word5">Word 5</string>
+    <string name="c_q_hint_word6">Word 6</string>
+    <string name="c_q_hint_word7">Word 7</string>
+    <string name="c_q_hint_word8">Word 8</string>
+    <string name="c_q_hint_word9">Word 9</string>
+    <string name="c_q_hint_word10">Word 10</string>
+    <string name="c_q_error_invalid_word">Invalid word</string>
+    <string name="c_q_error_unique_word">Enter unique word</string>
+    <string name="c_q_hint_definition1">Definition 1</string>
+    <string name="c_q_hint_definition2">Definition 2</string>
+    <string name="c_q_hint_definition3">Definition 3</string>
+    <string name="c_q_hint_definition4">Definition 4</string>
+    <string name="c_q_hint_definition5">Definition 5</string>
+    <string name="c_q_hint_definition6">Definition 6</string>
+    <string name="c_q_hint_definition7">Definition 7</string>
+    <string name="c_q_hint_definition8">Definition 8</string>
+    <string name="c_q_hint_definition9">Definition 9</string>
+    <string name="c_q_hint_definition10">Definition 10</string>
+    <string name="c_q_hint_option1">Option1</string>
+    <string name="c_q_hint_option2">Option2</string>
+    <string name="c_q_hint_option3">Option3</string>
+    <string name="c_q_hint_option4">Option4</string>
+    <string name="c_q_hint_option5">Option5</string>
+    <string name="c_q_hint_option6">Option6</string>
+    <string name="c_q_hint_option7">Option7</string>
+    <string name="c_q_hint_option8">Option8</string>
+    <string name="c_q_hint_option9">Option9</string>
+    <string name="c_q_hint_option10">Option10</string>
+    <string name="c_q_hint_option11">Option11</string>
+    <string name="c_q_hint_option12">Option12</string>
+    <string name="c_q_hint_option13">Option13</string>
+    <string name="c_q_hint_option14">Option14</string>
+    <string name="c_q_hint_option15">Option15</string>
+    <string name="c_q_hint_option16">Option16</string>
+    <string name="c_q_hint_option17">Option17</string>
+    <string name="c_q_hint_option18">Option18</string>
+    <string name="c_q_hint_option19">Option19</string>
+    <string name="c_q_hint_option20">Option20</string>
+    <string name="c_q_hint_option21">Option21</string>
+    <string name="c_q_hint_option22">Option22</string>
+    <string name="c_q_hint_option23">Option23</string>
+    <string name="c_q_hint_option24">Option24</string>
+    <string name="c_q_hint_option25">Option25</string>
+    <string name="c_q_hint_option26">Option26</string>
+    <string name="c_q_hint_option27">Option27</string>
+    <string name="c_q_hint_option28">Option28</string>
+    <string name="c_q_hint_option29">Option29</string>
+    <string name="c_q_hint_option30">Option30</string>
+    <string name="c_q_error_invalid_definition">Invalid definition</string>
+    <string name="c_q_button_add_word">Add Word</string>
+    <string name="c_q_button_create_quiz">Create</string>
+    <string name="c_q_button_reset_quiz">Reset</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="ops_button_logout">LOG OUT</string>
+
+
+</resources>
